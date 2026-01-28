@@ -8,13 +8,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 20.4375rem;
+  width: clamp(20.4375rem, 50vw, 24rem);
   box-shadow: 8px 8px 0px;
-}
-@media (min-width: 768px) {
-  .card {
-    width: 24rem;
-  }
 }
 .blog-image {
   border-radius: 10px;
@@ -25,42 +20,25 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  width: 17.4375rem;
-}
-@media (min-width: 768px) {
-  .content {
-    width: 21rem;
-  }
+  width: clamp(17.4375rem, 40vw, 21rem);
 }
 .category {
-  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
   font-weight: 800;
   line-height: 150%;
   background-color: var(--body-background-color);
-  width: 4.5625rem;
+  width: clamp(4.5625rem, 10vw, 5.125rem);
   padding: 0.25rem 0.75rem;
   border-radius: 4px;
 }
-@media (min-width: 768px) {
-  .category {
-    width: 5.125rem;
-    font-size: 0.875rem;
-  }
-}
 .publish-date {
-  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
   font-weight: 500;
   line-height: 150%;
-  width: 7.6875rem;
-}
-@media (min-width: 768px) {
-  .publish-date {
-    width: 8.9375rem;
-    font-size: 0.875rem;
-  }
+  width: clamp(7.6875rem, 20vw, 8.9375rem);
 }
 .title {
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   font-weight: 800;
   line-height: 150%;
   cursor: pointer;
@@ -68,32 +46,22 @@
 .title:hover {
   color: var(--body-background-color);
 }
-@media (min-width: 768px) {
-  .title {
-    font-size: 1.5rem;
-  }
-}
 .description {
-  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
   line-height: 150%;
-  color: #6b6b6b;
+  color: var(--preview-card-description-color);
   font-weight: 500;
-}
-@media (min-width: 768px) {
-  .description {
-    font-size: 1rem;
-  }
 }
 .author {
   display: grid;
-  grid-template-columns: 32px 1fr;
+  grid-template-columns: 2rem 1fr;
   place-items: center;
   width: 8.0625rem;
   column-gap: 0.75rem;
 }
 .user-pic {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
 }
 .author-name {
   font-size: 0.875rem;
